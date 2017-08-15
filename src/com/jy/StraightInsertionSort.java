@@ -30,7 +30,7 @@ public class StraightInsertionSort {
 		for (int i = 1; i < arrayLength; i++) {
 			// 保存当前比较的值，当整体后移是保证改值不会丢失
 			DataWrap temp = dataWraps[i];
-
+			// 只有当前元素temp比前一个元素小才需要进行下面的操作，否则temp和前面的元素自然就组成排序数组
 			if (dataWraps[i].compareTo(dataWraps[i - 1]) < 0) {
 				int j = i - 1;
 				// 整体往后移动，直至找到比当前值temp小的值为止
