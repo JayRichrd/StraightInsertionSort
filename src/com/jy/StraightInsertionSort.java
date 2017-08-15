@@ -10,11 +10,13 @@ public class StraightInsertionSort {
 				new DataWrap(30, ""), new DataWrap(13, "") };
 
 		System.out.println("排序前：" + Arrays.toString(dataWraps));
-
+		// 开始时间
+		long startTime = System.currentTimeMillis();
 		straightInsertionSort(dataWraps);
-
+		// 结束时间
+		long stopTime = System.currentTimeMillis();
 		System.out.println("*********************排序结束*********************");
-
+		System.out.println("排序耗时t：" + (stopTime - startTime) + "ms");
 		System.out.println("排序后（从小到大）：" + Arrays.toString(dataWraps));
 	}
 
